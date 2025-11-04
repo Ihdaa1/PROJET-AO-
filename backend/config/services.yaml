@@ -1,0 +1,25 @@
+parameters:
+    jwt_secret: '%env(JWT_SECRET)%'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            $jwtSecret: '%jwt_secret%'
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    App\Service\JwtService:
+        arguments:
+            $jwtSecret: '%jwt_secret%'
+    
+    # CORS listener
+    App\EventListener\CorsListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, priority: 1000 }

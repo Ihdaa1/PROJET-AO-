@@ -1,0 +1,5 @@
+.login-page { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.login-form { background: #fff; padding: 20px; border-radius: 8px; width: 320px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.login-form input { width: 100%; padding: 8px; margin: 6px 0; border: 1px solid #ccc; border-radius: 4px; }
+.login-form button { width: 100%; margin-top: 10px; }
+.error { color: #fff; background: #e74c3c; padding: 8px; border-radius: 4px; text-align: center; }

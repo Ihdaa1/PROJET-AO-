@@ -1,0 +1,153 @@
+/* ====== Container principal ====== */
+.page-container {
+    min-height: 100vh;
+    background-color: #f4f7fc;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+  
+  .liste-prestataires-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .liste-prestataires-container h2 {
+    text-align: center;
+    color: #00ad9e;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  /* ====== Messages d'erreur ====== */
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+  }
+  
+  /* ====== Message pas de données ====== */
+  .no-data {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 2px dashed #ddd;
+  }
+  
+  /* ====== Container du tableau ====== */
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .prestataires-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 600px;
+  }
+  
+  .prestataires-table thead {
+    background-color: #00ad9e;
+    color: white;
+  }
+  
+  .prestataires-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .prestataires-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .prestataires-table tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  .prestataires-table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .prestataires-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* ====== Bouton retour ====== */
+  .global-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #1b3031fa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+  }
+  
+  .global-back:hover {
+    background-color: #115a5a;
+    transform: translateX(-3px);
+  }
+  
+  /* ====== État de chargement ====== */
+  .liste-prestataires-container > p {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+    font-size: 1.1rem;
+  }
+  
+  /* ====== Responsive ====== */
+  @media (max-width: 768px) {
+    .liste-prestataires-container {
+      padding: 20px;
+      margin: 20px auto;
+    }
+  
+    .global-back {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-bottom: 20px;
+      display: block;
+      width: fit-content;
+    }
+  
+    .prestataires-table {
+      font-size: 0.85rem;
+    }
+  
+    .prestataires-table th,
+    .prestataires-table td {
+      padding: 8px 6px;
+    }
+  
+    .liste-prestataires-container h2 {
+      font-size: 1.4rem;
+    }
+  }

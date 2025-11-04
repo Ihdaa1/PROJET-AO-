@@ -1,0 +1,223 @@
+/* === GLOBAL === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* === CONTAINER === */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #00bfa6 0%, #0099b8 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-header h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* === MENU === */
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+/* === LOGOUT === */
+.logout-btn {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 90%;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 15px 0 0 15px;
+  overflow-y: auto;
+  padding: 30px 50px;
+}
+
+/* === HEADER === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5f2f1;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.admin-info h3 {
+  font-size: 1.2rem;
+  color: #007d84;
+}
+
+.admin-name {
+  font-weight: 700;
+}
+
+.admin-email {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* === BODY === */
+.dashboard-body h2 {
+  font-size: 1.6rem;
+  color: #0099b8;
+  margin-bottom: 10px;
+}
+
+.dashboard-body p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* === CARDS SECTION === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 153, 184, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #00bfa6;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 153, 184, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #007d84;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* === CARD BUTTON === */
+.btn-card {
+  display: inline-block;
+  background: linear-gradient(90deg, #00bfa6, #0099b8);
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.btn-card:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* === SCROLLBAR CUSTOM === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bfa6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0099b8;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}

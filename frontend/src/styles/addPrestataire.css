@@ -1,0 +1,87 @@
+.addprest-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.addprest-container h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.prestataire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-submit {
+  background-color: #004aad;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #003b8e;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.prestataires-list {
+  margin-top: 25px;
+}
+
+.prestataires-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prestataires-list th,
+.prestataires-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.prestataires-list th {
+  background-color: #004aad;
+  color: white;
+}
